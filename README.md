@@ -1,6 +1,6 @@
 # mesmer-m-tp
 
-# code for calibrating mesmer-m-tp and using the calibrated parameters to generate emulations 
+## code for calibrating mesmer-m-tp and using the calibrated parameters to generate emulations 
 
 File structure: 
 ./config 
