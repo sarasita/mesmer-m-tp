@@ -4,7 +4,7 @@ output_path      = Path('/mnt/PROVIDE/sarah/mesmer-m-tp-dev/')
 
 ssp_ids          = ['ssp119', 'ssp126', 'ssp245', 'ssp370', 'ssp585'] 
 ref_period       = [1850, 1900]
-model_ids        = ['ACCESS-CM2',
+model_ids       = ['ACCESS-CM2',
                     'ACCESS-ESM1-5',
                     'AWI-CM-1-1-MR',
                     'CESM2-WACCM',
@@ -28,7 +28,7 @@ model_ids        = ['ACCESS-CM2',
                     'NorESM2-LM',
                     'NorESM2-MM',
                     'UKESM1-0-LL']
-training_ids    =  ['r1i1p1f1',
+training_ids =     ['r1i1p1f1',
                     'r1i1p1f1',
                     'r1i1p1f1',
                     'r1i1p1f1',
