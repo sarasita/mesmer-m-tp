@@ -57,7 +57,7 @@ def get_input_data(model_id, run_id_training = None):
         run_id_training  = cset.model_training_mapping[model_id]
     
     # Load pre-processed and stored GMT data and extract meta data 
-    GMT_ds          = xr.open_dataset(cset.output_path.joinpath(f'processed_CMIP6/{model_id}/{model_id}_GMT-LO_processed.nc')).load()
+    GMT_ds          = xr.open_dataset(cset.output_path.joinpath(f'processed_CMIP6/{model_id}/GMT/{model_id}_GMT-LO_processed.nc')).load()
     c_ssp_ids       = GMT_ds['abs_gmt'].sel(run_id = run_id_training).dropna(dim = 'year', how = 'all').ssp_id.values
     n_c_ssp_ids     = len(c_ssp_ids)-1 
     n_years         = 165 + n_c_ssp_ids*86

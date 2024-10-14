@@ -34,10 +34,10 @@ from train.gmt_trend import Tglob_lowess_smoothed
 #%%
 
 if __name__ == '__main__': 
-    for model_id in tqdm(cset.model_ids[2:], total = cset.n_models):
+    for model_id in tqdm(cset.model_ids[:], total = cset.n_models):
         # extract all run_ids (only runs with historical period for tas and precip are consiered)
-        tas_runs        = [f.split('_')[4] for f in os.listdir(ccon.tas_path) if  (model_id in f and 'historical' in f)]
-        pr_runs         = [f.split('_')[4] for f in os.listdir(ccon.precip_path) if  (model_id in f and 'historical' in f)]
+        tas_runs        = [f.split('_')[4] for f in os.listdir(ccon.tas_path) if  (f.split('_')[2] == model_id) and ('historical' in f)]
+        pr_runs         = [f.split('_')[4] for f in os.listdir(ccon.precip_path) if  (f.split('_')[2] == model_id) and ('historical' in f)]
         
         combined_runs   = list(set(tas_runs).intersection(pr_runs))
         n_runs          = len(combined_runs)  

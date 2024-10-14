@@ -64,3 +64,5 @@ if __name__ == '__main__':
             storage_path.mkdir(parents = True, exist_ok = True)
             joblib.dump(AR_results, Path.joinpath(storage_path, f'AR-calib_{model_id}_{ssp_id}_{run_id_training}.pkl'))
 
+
+# %%

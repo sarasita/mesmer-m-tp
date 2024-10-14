@@ -1,12 +1,13 @@
 from pathlib import Path
 
 data_path           = Path('/mnt/CMIP6_storage/cmip6-ng/')
-precip_path         = Path('/mnt/CMIP6_storage/cmip6-ng/pr/mon/g025/')
-tas_path            = Path('/mnt/CMIP6_storage/cmip6-ng/tas/mon/g025')
+precip_path         = data_path / 'pr' / 'mon' / 'g025'
+tas_path            = data_path / 'tas' / 'mon' / 'g025'
 
 code_path           = Path('/home/ubuntu/sarah/files/mesmer-m-tp-publication/')    
+aod_file            = code_path / 'data' / 'isoaod_gl.txt' # path to aerosol optical depth data
+coords_file         = code_path / 'data' / 'ew_coords.npy' # path to coordinate array
 
- 
 emu_vars            = ['tas', 'pr']
 n_sindex            = 2652
 n_months            = 12
